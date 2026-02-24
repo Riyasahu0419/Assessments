@@ -1,0 +1,32 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.assignment-attempt-page {
+  .back-button {
+    @include button-secondary;
+    margin-bottom: $spacing-lg;
+  }
+
+  .attempt-layout {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include desktop {
+      flex-direction: row;
+      gap: $spacing-lg;
+    }
+
+    .left-column,
+    .right-column {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .left-column {
+      @include desktop {
+        flex: 0 0 400px;
+      }
+    }
+  }
+}

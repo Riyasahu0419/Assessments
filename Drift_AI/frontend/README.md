@@ -13,14 +13,14 @@ This application is a proof-of-concept tool for HR departments to track employee
 1. **Backend:**
    - Navigate to `/backend`
    - Install: `npm install`
-   - Start: `node server.js`
+   - Start: `npm start`
    - The server will run on port 5000 and initialize `database.sqlite` automatically.
 
 2. **Frontend:**
    - Navigate to `/frontend`
    - Install: `npm install`
    - Start: `npm run dev`
-   - Access via `http://localhost:3000`
+   - Access via `http://localhost:5173`
 
 ## Assumptions and Limitations
 - **No Auth:** As per requirements, the system is open. In a production environment, JWT or Session-based auth would be mandatory.

@@ -1,0 +1,71 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.assignment-list-page {
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+    margin-bottom: $spacing-lg;
+    padding: $spacing-md;
+    background: $bg-primary;
+    border-radius: $border-radius;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-xs;
+
+      @include tablet {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      label {
+        font-weight: 500;
+        font-size: $font-size-sm;
+        color: $text-secondary;
+      }
+
+      select {
+        padding: $spacing-sm $spacing-md;
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+        font-size: $font-size-base;
+        background: white;
+        cursor: pointer;
+        min-height: $touch-target-min;
+
+        &:focus {
+          outline: 2px solid $primary-color;
+          outline-offset: 2px;
+        }
+      }
+    }
+  }
+
+  .assignments-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .no-assignments {
+    text-align: center;
+    padding: $spacing-xl;
+    color: $text-secondary;
+  }
+}

@@ -1,0 +1,46 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.sql-editor {
+  @include card;
+  margin-bottom: $spacing-md;
+
+  .editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+
+    h3 {
+      font-size: $font-size-lg;
+      color: $text-primary;
+    }
+
+    .keyboard-hint {
+      font-size: $font-size-xs;
+      color: $text-tertiary;
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
+    }
+  }
+
+  .editor-wrapper {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    overflow: hidden;
+    margin-bottom: $spacing-md;
+  }
+
+  .execute-button {
+    @include button-primary;
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+      min-width: 200px;
+    }
+  }
+}

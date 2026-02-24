@@ -1,0 +1,81 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.assignment-card {
+  @include card;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: $touch-target-min * 3;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-sm;
+
+    h3 {
+      font-size: $font-size-lg;
+      color: $text-primary;
+      flex: 1;
+    }
+
+    .difficulty-badge {
+      padding: $spacing-xs $spacing-sm;
+      border-radius: $border-radius;
+      font-size: $font-size-xs;
+      font-weight: 600;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      &.difficulty-easy {
+        background: lighten($difficulty-easy, 45%);
+        color: darken($difficulty-easy, 10%);
+      }
+
+      &.difficulty-medium {
+        background: lighten($difficulty-medium, 40%);
+        color: darken($difficulty-medium, 10%);
+      }
+
+      &.difficulty-hard {
+        background: lighten($difficulty-hard, 40%);
+        color: darken($difficulty-hard, 10%);
+      }
+    }
+  }
+
+  .card-description {
+    color: $text-secondary;
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-md;
+    line-height: 1.6;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $spacing-sm;
+    border-top: 1px solid $border-color;
+    font-size: $font-size-sm;
+
+    .category {
+      color: $primary-color;
+      font-weight: 500;
+    }
+
+    .time {
+      color: $text-tertiary;
+    }
+  }
+}

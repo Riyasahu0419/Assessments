@@ -1,0 +1,104 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.question-panel {
+  @include card;
+  margin-bottom: $spacing-md;
+
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: $spacing-md;
+      flex: 1;
+
+      h2 {
+        font-size: $font-size-xl;
+        color: $text-primary;
+      }
+
+      .difficulty-badge {
+        padding: $spacing-xs $spacing-sm;
+        border-radius: $border-radius;
+        font-size: $font-size-xs;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &.difficulty-easy {
+          background: lighten($difficulty-easy, 45%);
+          color: darken($difficulty-easy, 10%);
+        }
+
+        &.difficulty-medium {
+          background: lighten($difficulty-medium, 40%);
+          color: darken($difficulty-medium, 10%);
+        }
+
+        &.difficulty-hard {
+          background: lighten($difficulty-hard, 40%);
+          color: darken($difficulty-hard, 10%);
+        }
+      }
+    }
+
+    .collapse-button {
+      @include button-secondary;
+      padding: $spacing-sm;
+      min-width: $touch-target-min;
+      font-size: $font-size-lg;
+
+      @media (min-width: $breakpoint-tablet) {
+        display: none;
+      }
+    }
+  }
+
+  .panel-content {
+    .question-text {
+      font-size: $font-size-base;
+      line-height: 1.6;
+      color: $text-primary;
+      margin-bottom: $spacing-lg;
+    }
+
+    .requirements {
+      h3 {
+        font-size: $font-size-base;
+        font-weight: 600;
+        margin-bottom: $spacing-sm;
+        color: $text-primary;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          padding: $spacing-sm 0;
+          padding-left: $spacing-lg;
+          position: relative;
+          color: $text-secondary;
+
+          &::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: $secondary-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &.collapsed {
+    .panel-header {
+      margin-bottom: 0;
+    }
+  }
+}

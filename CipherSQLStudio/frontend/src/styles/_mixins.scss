@@ -1,0 +1,76 @@
+@import './variables';
+
+// Responsive mixins
+@mixin mobile {
+  @media (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+// Utility mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card {
+  background: $bg-primary;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: $spacing-md;
+}
+
+@mixin button-base {
+  padding: $spacing-sm $spacing-md;
+  border: none;
+  border-radius: $border-radius;
+  font-size: $font-size-base;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: $touch-target-min;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: $primary-color;
+  color: white;
+
+  &:hover:not(:disabled) {
+    background: $primary-hover;
+  }
+}
+
+@mixin button-secondary {
+  @include button-base;
+  background: $bg-tertiary;
+  color: $text-primary;
+
+  &:hover:not(:disabled) {
+    background: darken($bg-tertiary, 5%);
+  }
+}
