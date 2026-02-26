@@ -1,0 +1,132 @@
+.city-card {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-card--loading,
+.city-card--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.city-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.city-card__name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.city-card__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.city-card__favorite,
+.city-card__remove {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.city-card__favorite:hover {
+  color: #fbbf24;
+}
+
+.city-card__favorite--active {
+  color: #fbbf24;
+}
+
+.city-card__remove:hover {
+  color: #ef4444;
+}
+
+.city-card__weather {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.city-card__icon {
+  font-size: 3rem;
+}
+
+.city-card__temp {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.city-card__condition {
+  margin: 0 0 1rem 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.city-card__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: auto;
+}
+
+.city-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.city-card__detail-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.city-card__detail-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.city-card__updated {
+  margin: 0.75rem 0 0 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.city-card__error {
+  color: #ef4444;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.city-card__retry {
+  padding: 0.5rem 1rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.city-card__retry:hover {
+  background-color: #2563eb;
+}
