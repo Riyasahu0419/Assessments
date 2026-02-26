@@ -21,7 +21,7 @@ const uiSlice = createSlice({
   name: 'ui',
   initialState,
   reducers: {
-    openDetailedView: (state, action: PayloadAction<string>) => {
+    openDetailedView: (state) => {
       state.isDetailedViewOpen = true;
     },
     closeDetailedView: (state) => {

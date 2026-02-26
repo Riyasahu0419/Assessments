@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
 import { CityCard } from './CityCard';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { fetchCompleteWeatherData, selectCity } from '../../store/slices/weatherSlice';
+import { selectCity } from '../../store/slices/weatherSlice';
 import { addFavorite, removeFavorite } from '../../store/slices/favoritesSlice';
 import './Dashboard.css';
 

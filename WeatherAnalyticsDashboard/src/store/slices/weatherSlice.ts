@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { CurrentWeather, ForecastData, CityWeatherData } from '../../types/weather.types';
+import { CurrentWeather, CityWeatherData } from '../../types/weather.types';
 import { weatherApi } from '../../services/weatherApi';
 
 interface WeatherState {
@@ -116,9 +116,8 @@ const weatherSlice = createSlice({
     });
 
     // fetchCompleteWeatherData
-    builder.addCase(fetchCompleteWeatherData.pending, (state, action) => {
-      const cityQuery = action.meta.arg;
-      // We don't know cityId yet, so we'll handle it in fulfilled
+    builder.addCase(fetchCompleteWeatherData.pending, () => {
+      // Pending state - we'll handle it in fulfilled
     });
     
     builder.addCase(fetchCompleteWeatherData.fulfilled, (state, action) => {
@@ -133,7 +132,7 @@ const weatherSlice = createSlice({
       };
     });
     
-    builder.addCase(fetchCompleteWeatherData.rejected, (state, action) => {
+    builder.addCase(fetchCompleteWeatherData.rejected, (_, action) => {
       // Handle error - we don't have cityId, so log it
       console.error('Failed to fetch complete weather data:', action.error);
     });

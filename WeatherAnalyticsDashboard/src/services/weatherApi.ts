@@ -6,7 +6,6 @@ import {
   CitySearchResult,
   HourlyForecast,
   DailyForecast,
-  WeatherCondition,
 } from '../types/weather.types';
 import { mapWeatherIcon, mapConditionCode } from '../utils/weatherIconMapper';
 import { calculateDewPoint } from '../utils/temperatureConverter';

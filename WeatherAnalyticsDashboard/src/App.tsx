@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { SearchBar } from './components/search/SearchBar';
 import { Dashboard } from './components/dashboard/Dashboard';
 import { useAppDispatch, useAppSelector } from './store/hooks';

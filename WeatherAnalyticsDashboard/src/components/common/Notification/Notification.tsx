@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Notification as NotificationType } from '../../../types/weather.types';
+import { useEffect } from 'react';
+import { Notification as NotificationType, NotificationType as NotificationTypeEnum } from '../../../types/weather.types';
 import './Notification.css';
 
 interface NotificationProps {
@@ -33,7 +33,7 @@ export const Notification: React.FC<NotificationProps> = ({ notification, onDism
   );
 };
 
-function getIcon(type: NotificationType): string {
+function getIcon(type: NotificationTypeEnum): string {
   switch (type) {
     case 'success':
       return '✓';
