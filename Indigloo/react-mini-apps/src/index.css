@@ -1,0 +1,29 @@
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./files-css/colors.css";
+@import "./files-css/dashboard.css";
+@import "./files-css/accordion.css";
+@import "./files-css/landing.css";
+@import "./files-css/form.css";
+@import "./files-css/kanban.css";
+@import "./files-css/performance.css";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  background-color: var(--color-darker);
+  color: #e2e8f0;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}

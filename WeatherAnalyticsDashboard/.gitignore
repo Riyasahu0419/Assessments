@@ -27,3 +27,11 @@ dist-ssr
 .env
 .env.local
 .env.production
+
+# Kiro specs and task files
+.kiro/
+task.md
+tasks.md
+
+design.md
+requirements.md
