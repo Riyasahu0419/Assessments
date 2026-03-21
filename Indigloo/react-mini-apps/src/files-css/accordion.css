@@ -25,7 +25,7 @@
   transition: background 0.2s;
 }
 .accordion-btn-custom:hover {
-  background: #263548;
+  background: #0d2233;
 }
 .accordion-panel {
   max-height: 0;

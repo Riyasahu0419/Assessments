@@ -1,0 +1,65 @@
+:root {
+  --color-primary: #6366f1;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-border: #334155;
+  --color-card-bg: #1e293b;
+  --color-muted: #64748b;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+.step-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 2px solid var(--color-border);
+  background: var(--color-card-bg);
+  color: var(--color-muted);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+.step-dot.active {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: white;
+}
+.step-dot.completed {
+  border-color: var(--color-success);
+  background: var(--color-success);
+  color: white;
+}
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border);
+  max-width: 80px;
+  transition: background 0.3s;
+}
+.step-line.completed {
+  background: var(--color-success);
+}
+.form-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.form-field-error {
+  color: var(--color-danger);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
