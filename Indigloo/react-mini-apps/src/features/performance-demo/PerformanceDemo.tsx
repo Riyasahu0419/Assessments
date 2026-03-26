@@ -41,9 +41,9 @@ export default function PerformanceDemo() {
     <div className="container py-5" style={{ maxWidth: 720 }}>
       <div className="mb-4">
         <h2 style={{ color: '#f1f5f9', fontWeight: 700 }}>Performance Optimization</h2>
-        <p style={{ color: 'var(--color-muted)' }}>
+        {/* <p style={{ color: 'var(--color-muted)' }}>
           Rendering {TOTAL_ITEMS.toLocaleString()} items with virtualization, <code style={{ color: 'var(--color-primary)' }}>useMemo</code>, <code style={{ color: 'var(--color-primary)' }}>useCallback</code>, and <code style={{ color: 'var(--color-primary)' }}>React.memo</code>.
-        </p>
+        </p> */}
       </div>
 
       <div className="d-flex gap-3 align-items-center mb-3 flex-wrap">
@@ -63,7 +63,7 @@ export default function PerformanceDemo() {
         </div>
       </div>
 
-      <div className="d-flex gap-2 mb-3 flex-wrap">
+      {/* <div className="d-flex gap-2 mb-3 flex-wrap">
         {[
           { label: 'useMemo', desc: 'Cached filter', color: 'var(--color-primary)' },
           { label: 'useCallback', desc: 'Stable handler', color: 'var(--color-secondary)' },
@@ -75,7 +75,7 @@ export default function PerformanceDemo() {
             <span style={{ color: 'var(--color-muted)', marginLeft: 6 }}>{b.desc}</span>
           </span>
         ))}
-      </div>
+      </div> */}
 
       <div
         ref={containerRef}
