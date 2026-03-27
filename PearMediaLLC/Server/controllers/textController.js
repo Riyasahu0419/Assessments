@@ -25,11 +25,11 @@ export const enhanceText = async (req, res) => {
       data = await response.json();
     } else {
       const text = await response.text();
-      console.log("RAW RESPONSE:", text);
+      // console.log("RAW RESPONSE:", text);
       throw new Error(text);
     }
 
-    console.log("HF TEXT:", data);
+    // console.log("HF TEXT:", data);
 
     let enhancedText = "";
 

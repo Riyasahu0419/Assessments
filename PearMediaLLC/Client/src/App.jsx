@@ -50,7 +50,7 @@ function App() {
   const [image, setImage] = useState("");
   const [analysis, setAnalysis] = useState("");
 
-  // ✅ Single reset handler to clear all results between workflows
+  // Single reset handler to clear all results between workflows
   const handleReset = () => {
     setEnhancedText("");
     setImage("");

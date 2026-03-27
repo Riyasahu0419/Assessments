@@ -9,15 +9,18 @@ function TextWorkflow({ setEnhancedText, setImage }) {
   const handleEnhance = async () => {
     if (!prompt.trim()) return alert("Enter a prompt first");
     setLoading(true);
-    // ✅ Fix 5: Reset stale enhanced text before new request
+    // Fix 5: Reset stale enhanced text before new request
     setLocalEnhanced("");
     setEnhancedText("");
     try {
       const res = await enhanceText(prompt);
+      // console.log("enhanced text", res);
       setLocalEnhanced(res.data.enhanced);
       setEnhancedText(res.data.enhanced);
     } catch (err) {
-      alert("Error enhancing text: " + (err.response?.data?.error || err.message));
+      alert(
+        "Error enhancing text: " + (err.response?.data?.error || err.message),
+      );
     } finally {
       setLoading(false);
     }
@@ -28,10 +31,13 @@ function TextWorkflow({ setEnhancedText, setImage }) {
     setLoading(true);
     try {
       const res = await generateImage(localEnhanced);
+      //  console.log("generate image ",res)
       if (res.data.error) return alert("Generation error: " + res.data.error);
       setImage(res.data.image);
     } catch (err) {
-      alert("Error generating image: " + (err.response?.data?.error || err.message));
+      alert(
+        "Error generating image: " + (err.response?.data?.error || err.message),
+      );
     } finally {
       setLoading(false);
     }
@@ -51,7 +57,9 @@ function TextWorkflow({ setEnhancedText, setImage }) {
       </button>
       {localEnhanced && (
         <>
-          <p><strong>Enhanced:</strong> {localEnhanced}</p>
+          <p>
+            <strong>Enhanced:</strong> {localEnhanced}
+          </p>
           <button onClick={handleGenerate} disabled={loading}>
             {loading ? "Generating..." : "Generate Image"}
           </button>
