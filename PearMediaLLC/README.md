@@ -1,5 +1,7 @@
 # AI Image & Text Generator
 
+🔗 Live Demo: https://assessments-hlwa.vercel.app/
+
 ## What it does
 
 **Text Workflow**
@@ -55,6 +57,13 @@ npm run dev
 
 Frontend: `http://localhost:5173`  
 Backend: `http://localhost:5000`
+
+## Deployment
+
+Frontend: https://assessments-hlwa.vercel.app/  
+Backend: https://assessments-rfis.vercel.app/
+
+Both deployed on Vercel.
 
 ## Endpoints
 
