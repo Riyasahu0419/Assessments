@@ -20,7 +20,7 @@
 
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const BASE_URL = "https://assessments-rfis.vercel.app/api" || "http://localhost:5000/api";
 console.log("API BASE_URL:", BASE_URL);
 
 export const enhanceText = (prompt) => {
