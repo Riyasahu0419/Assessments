@@ -4,20 +4,25 @@
 
 **Text Workflow**
 - Type a prompt
-- It gets enhanced using flan-t5
-- Then generates an image from it using Stable Diffusion
+- It gets enhanced using flan-t5 (Hugging Face)
+- Then generates an image from Unsplash based on the enhanced prompt
 
 **Image Workflow**
 - Upload any image
-- It gets captioned using BLIP
-- Then generates a variation based on that caption
+- A mock caption is generated describing the scene
+- Then a related image is fetched from Unsplash based on that caption
 
 ## Tech Stack
 
 - React + Vite
 - Node.js + Express
-- Hugging Face API
+- Hugging Face API (flan-t5 for text enhancement only)
+- Unsplash (image generation and variation)
 - Multer
+
+## Note on Image Generation
+
+Stable Diffusion and BLIP via Hugging Face were attempted but the API URLs are not supported in the current environment. Image generation and image variation now use Unsplash as a reliable fallback.
 
 ## Setup
 
@@ -55,6 +60,6 @@ Backend: `http://localhost:5000`
 
 | Method | Endpoint | What it does |
 |--------|----------|--------------|
-| POST | `/api/text/enhance` | Enhance a prompt |
-| POST | `/api/image/generate` | Generate image from prompt |
-| POST | `/api/image/analyze` | Upload image, get caption + variation |
+| POST | `/api/text/enhance` | Enhance a prompt using flan-t5 (Hugging Face) |
+| POST | `/api/image/generate` | Generate image from prompt via Unsplash |
+| POST | `/api/image/analyze` | Returns a mock caption + Unsplash variation image |
