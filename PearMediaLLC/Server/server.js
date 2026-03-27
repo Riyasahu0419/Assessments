@@ -51,4 +51,9 @@ app.use(express.json());
 app.use("/api/text", textRoutes);
 app.use("/api/image", imageRoutes);
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+// For local development
+if (process.env.NODE_ENV !== "production") {
+  app.listen(5000, () => console.log("Server running on port 5000"));
+}
+
+export default app;
