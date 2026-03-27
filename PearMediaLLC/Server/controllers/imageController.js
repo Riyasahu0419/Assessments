@@ -110,10 +110,8 @@
 //   }
 // };
 
-import fs from "fs";
-
 /**
- * ✅ IMAGE GENERATION (Unsplash - ALWAYS WORKS)
+ * IMAGE GENERATION (Unsplash)
  */
 export const generateImage = async (req, res) => {
   try {

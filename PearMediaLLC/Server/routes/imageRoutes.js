@@ -7,7 +7,8 @@ import {
 
 const router = express.Router();
 
-const upload = multer({ dest: "uploads/" });
+// Use memory storage — Vercel filesystem is read-only
+const upload = multer({ storage: multer.memoryStorage() });
 
 router.post("/generate", generateImage);
 router.post("/analyze", upload.single("image"), analyzeImage);
