@@ -17,7 +17,7 @@
 //       }
 //     );
 
-//     // 🔥 Check content type
+//     // Check content type
 //     const contentType = response.headers.get("content-type");
 
 //     if (contentType.includes("application/json")) {
@@ -113,6 +113,7 @@
 /**
  * IMAGE GENERATION (Unsplash)
  */
+
 export const generateImage = async (req, res) => {
   try {
     const { prompt } = req.body;
@@ -129,7 +130,7 @@ export const generateImage = async (req, res) => {
   }
 };
 /**
- * ✅ IMAGE ANALYSIS (Mock + Smart Variation)
+ *  IMAGE ANALYSIS (Variation)
  */
 export const analyzeImage = async (req, res) => {
   try {
