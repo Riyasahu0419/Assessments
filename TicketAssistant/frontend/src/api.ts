@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL ?? 'https://assessments-ptjk.vercel.app'
+const BASE_URL = import.meta.env.VITE_API_URL ?? 'https://assessments-rfis.vercel.app'
 
 export const createTicket = (data: object) =>
   fetch(`${BASE_URL}/api/tickets`, {
