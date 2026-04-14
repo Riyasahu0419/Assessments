@@ -5,7 +5,7 @@ A web application where users can submit support tickets and AI automatically ca
 ## Live Demo
 
 - Frontend: https://assessments-9y3b.vercel.app
-- Backend API: https://assessments-ptjk.vercel.app
+- Backend API: https://assessments-rfis.vercel.app
 
 ---
 
@@ -183,7 +183,7 @@ The app is deployed as two separate Vercel projects from the same GitHub reposit
 
 ### Frontend deployment
 - Root directory set to `frontend`
-- Environment variable added: `VITE_API_URL=https://assessments-ptjk.vercel.app`
+- Environment variable added: `VITE_API_URL=https://assessments-rfis.vercel.app`
 - `vercel.json` includes a rewrite rule so React Router works on page refresh
 
 ---
