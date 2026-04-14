@@ -13,6 +13,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-app.use("/api/tickets", ticketRoutes);
+// Vercel routes /api/tickets/* here, so mount at /tickets
+app.use("/tickets", ticketRoutes);
 
 export default app;
